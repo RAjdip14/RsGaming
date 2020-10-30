@@ -1,0 +1,57 @@
+body {
+    background-image: url("../image/background.jpg");
+    /* background-color: #cccccc; */
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.field {
+    margin: 150px;
+    padding: 20px;
+    /* text-align: center; */
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: mintcream;
+}
+
+#email {
+    height: 25px;
+    width: 70%;
+}
+
+#password {
+    height: 25px;
+    width: 70%;
+}
+
+.login {
+    width: 45%;
+    margin: auto;
+    height: 500px;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+#btnlogin {
+    height: 30px;
+    width: 40%;
+    background-color: chartreuse;
+    border-radius: 7px;
+    padding: 5px 20px;
+    cursor: pointer;
+    border: blue;
+}
+
+#btnlogin:hover {
+    opacity: 1;
+    background-color: red;
+}

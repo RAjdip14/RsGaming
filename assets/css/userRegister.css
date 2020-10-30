@@ -1,0 +1,73 @@
+body {
+    background-image: url("../image/background.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.userfield {
+    margin: auto;
+    padding: 70px;
+    text-align: center;
+    background-color: transaent;
+    border-radius: 20px;
+}
+
+h1 {
+    height: 50px;
+    text-align: center;
+    color: mintcream;
+}
+
+.register {
+    width: 45%;
+    margin: auto;
+    height: 500px;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: left;
+    background-color: transparent;
+}
+
+#name {
+    height: 25px;
+    width: 70%;
+}
+
+#email {
+    height: 25px;
+    width: 70%;
+}
+
+#contact {
+    height: 25px;
+    width: 70%;
+}
+
+#password {
+    height: 25px;
+    width: 70%;
+}
+
+#confirm_password {
+    height: 25px;
+    width: 70%;
+}
+
+#btnRegister {
+    height: 25px;
+    width: 30%;
+    background-color: chartreuse;
+    border-radius: 7px;
+    padding: 5px 20px;
+    cursor: pointer;
+    border: blue;
+}
+
+#btnRegister:hover {
+    opacity: 1;
+    background-color: red;
+}
