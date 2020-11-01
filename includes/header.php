@@ -26,9 +26,7 @@ include($hostname . "/" . $projectName[1] . '/database/connection.php');
             background-color: darkcyan;
             /* padding: 20px 10px; */
         }
-.hello{
-    /* aomwthing */
-}
+
         .header a {
             height: 20px;
             /* float: left; */
