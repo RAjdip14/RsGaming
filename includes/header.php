@@ -76,7 +76,8 @@ include($hostname . "/" . $projectName[1] . '/database/connection.php');
 
         .search {
             height: 30px;
-            margin-left: 580px;
+            margin-left: 750px;
+            padding: 4px;
             float: left;
         }
 
