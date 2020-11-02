@@ -35,6 +35,8 @@ if (isset($_GET['status'])) {
             <td>Name</td>
             <td>Email</td>
             <td>Contact</td>
+            <td>Action</td>
+
         </tr>
         <?php
         while ($row = $records->fetch_object()) {
@@ -49,9 +51,6 @@ if (isset($_GET['status'])) {
 
                 <!-- <td><a href="show.php?id=<?php echo $row->id; ?>">Show</a></td> -->
                 <td><a href="editUser.php?edit_id=<?php echo $row->id; ?>">Edit</a></td>
-                <td>
-                    <a href="deleteUser.php?delete_id=<?php echo $row->id; ?>">DELETE</a>
-                </td>
             </tr>
         <?php
         }

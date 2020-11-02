@@ -6,8 +6,12 @@ if(isset($_REQUEST['btnlogin'])){
     $password = $_REQUEST['password'];
     $loginQuery = "SELECT * FROM `users` WHERE `email` = '$email' AND `password` = '$password' ";
     $rows = $db->query($loginQuery);
+    $result=$rows-> fetch_object();
     if ($rows->num_rows == 1) 
     {
+        $_SESSION['islogin']=true;
+        $_SESSION['name']=$result->name;
+        // print_r($_SESSION);
         header('location:../index.php');
     } else
     {

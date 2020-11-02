@@ -1,7 +1,7 @@
 <?php
 $db = new mysqli('localhost', 'root', '', 'rsgaming');
 // echo "<pre>";print_r($_SERVER);exit; 
-
+session_start();
 function file_url($path){
 //   'C:\xampp\httdocs\rsgaming\database\connection.php'
 $hostname = $_SERVER['DOCUMENT_ROOT'];

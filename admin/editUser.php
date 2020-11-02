@@ -18,10 +18,10 @@ if (isset($_REQUEST['update'])) {
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    $updateUserQuery  = "UPDATE `users` SET 
+    echo $updateUserQuery  = "UPDATE `users` SET 
         `name` = '$name',
-        `email = '$email',
-        `contact = '$contact'
+        `email` = '$email',
+        `contact` = '$contact' WHERE id = $id
     ";
 
     if ($db->query($updateUserQuery)) {

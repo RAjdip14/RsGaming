@@ -3,6 +3,7 @@
 $hostname = $_SERVER['DOCUMENT_ROOT'];
 $projectName = explode("/", $_SERVER['REQUEST_URI']);
 include($hostname . "/" . $projectName[1] . '/database/connection.php');
+session_start();
 ?>
 
 
@@ -45,6 +46,11 @@ include($hostname . "/" . $projectName[1] . '/database/connection.php');
             font-weight: bold;
         }
 
+        .topRight {
+            font-weight: bold;
+            float: right;
+        }
+
         .header a:hover {
             background-color: #ddd;
             color: black;
@@ -76,7 +82,7 @@ include($hostname . "/" . $projectName[1] . '/database/connection.php');
 
         .search {
             height: 30px;
-            margin-left: 750px;
+            margin-left: 500px;
             padding: 4px;
             float: left;
         }
@@ -93,6 +99,7 @@ include($hostname . "/" . $projectName[1] . '/database/connection.php');
         }
 
         .hRight {
+            padding-top: 10px;
             float: right;
         }
     </style>
@@ -109,6 +116,9 @@ include($hostname . "/" . $projectName[1] . '/database/connection.php');
                 <a class="aboutUs" href="<?php echo redirect_url("pages/aboutUs.php") ?>">About</a>
             </div>
         </ul>
+        <div class="topRight">
+            <?php echo "Hey " . $_SESSION['name']; ?>
+        </div>
         <div class="search">
             <form action="">
                 <!-- <input type="text" name="search" placeholder="Search"> -->
