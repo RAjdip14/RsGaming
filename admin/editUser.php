@@ -21,7 +21,7 @@ if (isset($_REQUEST['update'])) {
     $updateUserQuery  = "UPDATE `users` SET 
         `name` = '$name',
         `email = '$email',
-        `contact = '$contact', 
+        `contact = '$contact'
     ";
 
     if ($db->query($updateUserQuery)) {

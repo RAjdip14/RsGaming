@@ -50,7 +50,7 @@ if (isset($_GET['status'])) {
                 <!-- <td><a href="show.php?id=<?php echo $row->id; ?>">Show</a></td> -->
                 <td><a href="editUser.php?edit_id=<?php echo $row->id; ?>">Edit</a></td>
                 <td>
-                    <a href="deleteUsre.php?delete_id=<?php echo $row->id; ?>">DELETE</a>
+                    <a href="deleteUser.php?delete_id=<?php echo $row->id; ?>">DELETE</a>
                 </td>
             </tr>
         <?php

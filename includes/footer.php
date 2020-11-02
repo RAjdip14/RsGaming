@@ -2,7 +2,7 @@
 // $hostname = $_SERVER['DOCUMENT_ROOT'];
 // $projectName = explode("/",$_SERVER['REQUEST_URI']);
 // include($hostname."/".$projectName[1].'/database/connection.php');
-?>
+// ?>
 
 
 <!DOCTYPE html>
