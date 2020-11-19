@@ -5,108 +5,104 @@ $projectName = explode("/", $_SERVER['REQUEST_URI']);
 include($hostname . "/" . $projectName[1] . '/database/connection.php');
 session_start();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../assets/css/header.css"> -->
+    <link rel="stylesheet" href="Rsgaming/assets/css/bootstrap.min.css">
     <title>RsGaming</title>
     <style>
         .header {
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            /* float: left; */
-            background-color: darkcyan;
-            /* padding: 20px 10px; */
-        }
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    /* float: left; */
+    background-color: darkcyan;
+    /* padding: 20px 10px; */
+}
 
-        .header a {
-            height: 20px;
-            /* float: left; */
-            color: black;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            font-size: 18px;
-            line-height: 25px;
-            border-radius: 4px;
-        }
+.header a {
+    height: 20px;
+    /* float: left; */
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
 
-        .header a.logo {
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
 
-            font-size: 25px;
-            font-weight: bold;
-        }
+.topRight {
+    font-weight: bold;
+    float: right;
+}
 
-        .topRight {
-            font-weight: bold;
-            float: right;
-        }
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
-        .header a:hover {
-            background-color: #ddd;
-            color: black;
-        }
 
-        /* .header a.home {
-            float: left;
-            background-color: dodgerblue;
-            color: white;
-        } */
-        /* .header a.categories {
-            background-color: dodgerblue;
-            color: white;
-        }
+/* .header a.home {
+    float: left;
+    background-color: dodgerblue;
+    color: white;
+} */
 
-        .header a.contact {
-            background-color: dodgerblue;
-            color: white;
-        }
 
-        .header a.aboutUs {
-            background-color: dodgerblue;
-            color: white;
-        } */
+/* .header a.categories {
+    background-color: dodgerblue;
+    color: white;
+}
 
-        .header-left {
-            float: left;
-        }
+.header a.contact {
+    background-color: dodgerblue;
+    color: white;
+}
 
-        .search {
-            height: 30px;
-            margin-left: 500px;
-            padding: 4px;
-            float: left;
-        }
+.header a.aboutUs {
+    background-color: dodgerblue;
+    color: white;
+} */
 
-        .search input[type=search] {
+.header-left {
+    float: left;
+}
 
-            float: left;
+.search {
+    height: 30px;
+    margin-left: 500px;
+    padding: 4px;
+    float: left;
+}
 
-        }
+.search input[type=search] {
+    float: left;
+}
 
-        .search button.search {
-            float: left;
-            padding-top: 50px;
-        }
+.search button.search {
+    float: left;
+    padding-top: 50px;
+}
 
-        .hRight {
-            padding-top: 10px;
-            float: right;
-        }
+.hRight {
+    padding-top: 10px;
+    float: right;
+}
     </style>
 </head>
-
 <body>
-    <div class="header">
+<div class="header">
         <a href="" <?php echo redirect_url("index.php") ?> class="logo">RsGaming</a>
         <ul>
             <div class="header-left">

@@ -4,6 +4,7 @@ $projectName = explode("/", $_SERVER['REQUEST_URI']);
 include($hostname . "/" . $projectName[1] . '/database/connection.php');
 
 
+
 // // print_r($_SESSION);
 // if (!$_SESSION['isLogin']) {
 //     header('location:../authenticate/login.php');
@@ -26,7 +27,14 @@ if (isset($_GET['status'])) {
     echo "Deleted Successfully!";
 }
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <h1>User List</h1>
 <form method="post">
     <table border="1">
@@ -58,3 +66,7 @@ if (isset($_GET['status'])) {
     </table>
     <input type="submit" value="DELETE ALL">
 </form>
+<h2>Upload Games</h2>
+<a href="<?php echo redirect_url("admin/uploadGame.php"); ?>" id="">For Upload Game</a>
+</body>
+</html>

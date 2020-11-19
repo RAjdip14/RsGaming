@@ -40,7 +40,8 @@ if (isset($_REQUEST['btnRegister'])) {
             <h1>Register Page</h1>
             <form method="post" enctype="multipart/form-data" onsubmit="return validate();">
                 <input type="text" name="name" id="name" placeholder="Enter Your Name"><br /><br />
-                <input type="email" name="email" id="email" placeholder="Enter Your Email"><br /><br />
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" onblur="checkEmail(this.value)"><br />
+                <p class="message" style="display: inline;"></p><br /><br />
                 <input type="number" name="contact" id="contact" placeholder="Enter Your Contact Number"><br /><br />
                 <input type="password" name="password" id="password" placeholder="Enter your Password"><br /><br />
                 <input type="password" name="confirm_password" id="confirm_password" placeholder="Enter Confirm Password"><br /><br />
@@ -50,7 +51,41 @@ if (isset($_REQUEST['btnRegister'])) {
             </form>
         </fieldset>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
 
+        });
+
+        function checkEmail(email) {
+        userEmail = email;
+        $.ajax({
+            url: 'http://localhost/RSGaming/database/checkData.php?email=' + userEmail,
+            method: 'GET',
+            success: function(successData) {
+                if (successData == 0) {
+                    $('.message').text('Email Already exist');
+                    $('.message').append('<br/>');
+                    $('.message').css("color", "red");
+                } else {
+                    $('.message').text('All Okay');
+                    $('.message').append('<br/>');
+                    $('.message').css("color", "green");
+                }
+                console.log(successData);
+            },
+            error: function(errorData) {
+                console.log(errorData);
+                $('.message').text(errorData);
+                $('.message').append('<br/>');
+                $('.message').css("color", "red");
+
+            }
+        });
+
+    }
+
+    </script>
     <script>
         var pass_return = '';
 

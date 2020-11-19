@@ -4,6 +4,7 @@ $hostname = $_SERVER['DOCUMENT_ROOT'];
 $projectName = explode("/", $_SERVER['REQUEST_URI']);
 include($hostname . "/" . $projectName[1] . '/database/connection.php');
 
+
 $id = $_REQUEST['edit_id'];
 $userRecord = "SELECT * FROM `users` WHERE id = $id";
 
